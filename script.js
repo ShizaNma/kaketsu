@@ -9,7 +9,7 @@ let tofusprt = new PIXI.Sprite(tofutxtr);
 tofusprt.anchor.x = 0.5;
 tofusprt.anchor.y = 0.5;
 tofusprt.x = app.screen.width / 2;
-tofusprt.y = app.screen.height2;
+tofusprt.y = app.screen.height;
 app.stage.addChild(tofusprt);
 
 tofusprt.interactive = true;
