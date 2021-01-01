@@ -4,9 +4,13 @@ width: 450, height: 800, backgroundColor: 0x000000,
 let el = document.getElementById('app');
 el.appendChild(app.view);
 
-let tofusprt= new PIXI.Sprite.from('tofu.png');
-tofusprt.anchor.x = 0.5;
-tofusprt.anchor.y = 0.5;
-tofusprt.x = app.screen.width / 2;
-tofusprt.y = 0;
-app.stage.addChild(tofusprt);
+PIXI.loader.add("tofu.png");
+PIXI.loader.load((loader, resources) =>
+{
+let tofu= new PIXI.Sprite(resources["tofu.png"].texture);
+tofu.anchor.x = 0.5;
+tofu.anchor.y = 0.5;
+tofu.x = app.screen.width / 2;
+tofu.y = 50;
+app.stage.addChild(tofu);
+});
