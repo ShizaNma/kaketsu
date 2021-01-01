@@ -17,4 +17,11 @@ dy = -dy;
 }
 }
 }
+
+function Click(e) {
+if(e.clientX < 275 && e.clientX > 175 && e.clientY < y + 100 && e.clientY > y) {
+dy = -dy;
+}
+
+canvas.addEventListener('click', Click, false);
 setInterval(draw, 40);
