@@ -1,9 +1,8 @@
 body{
 background-color:#333333;
 }
-#game{
-width:450px;
-height:800px;
+#canvas{
+background-color:#ffffff;
 }
 #top{
 color:#ffffff;
