@@ -19,8 +19,17 @@ PIXI.loader.load((loader, resources) =>
     {
         for (const gameLoop of gameLoops)
         {
-            app.ticker.remove(gameLoop);
+            app.ticker.remove(gameLoop); 
         }
+        gameLoops = []; 
+    }
+    function removeAllScene()
+    {
+        for (const scene of app.stage.children)
+        {
+            app.stage.removeChild(scene); 
+        }
+    }
     function createGameScene()
     {
         removeAllScene(); 
