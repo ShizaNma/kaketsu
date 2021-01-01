@@ -12,7 +12,7 @@ tofu.onload = function() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.drawImage(tofu, x, y);
 y += dy;
-if(y + 100 > canvas.height) {
+if(y + dy > canvas.height - 100 || y + dy < 0) {
 dy = -dy;
 }
 }
