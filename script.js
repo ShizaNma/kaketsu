@@ -27,4 +27,4 @@ dy = -dy;
 }
 
 canvas.addEventListener('click', Click, false);
-setInterval(draw, 40);
+setInterval(draw, 20);
