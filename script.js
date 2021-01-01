@@ -20,7 +20,7 @@ dy = -dy;
 
 function Click(e) {
 var rect = canvas.getBoundingClientRect();
-x = e.clientX - rect.left;
+x = e.clientX - rect.left -　50;
 }
 
 canvas.addEventListener('click', Click, false);
