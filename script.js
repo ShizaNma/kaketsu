@@ -8,7 +8,7 @@ PIXI.loader.add("tofu.png");
 PIXI.loader.load((loader, resources) =>
 {
 let tofudy = 8;
-
+let gameLoops = [];
 function addGameLoop(gameLoopFunction)
 {
 app.ticker.add(gameLoopFunction);
@@ -20,8 +20,8 @@ tofu.anchor.x = 0.5;
 tofu.anchor.y = 0.5;
 tofu.x = app.screen.width / 2;
 tofu.y = 50;
-app.stage.addChild(tofu);
 });
+app.stage.addChild(tofu);
 
 function gameLoop()
 {
