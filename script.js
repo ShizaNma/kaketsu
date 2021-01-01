@@ -14,3 +14,13 @@ tofu.x = app.screen.width / 2;
 tofu.y = 50;
 app.stage.addChild(tofu);
 });
+
+function gameLoop()
+{
+tofu.y += tofudy
+if(tofu.y < 50 || tofu.y > 750)
+{
+tofudy = -tofudy
+}
+}
+addGameLoop(gameLoop);
