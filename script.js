@@ -3,6 +3,7 @@ width: 450, height: 800, backgroundColor: 0x000000,
 });
 let el = document.getElementById('app');
 el.appendChild(app.view);
+let tofudy = 8;
 
 PIXI.loader.add("tofu.png");
 PIXI.loader.load((loader, resources) =>
