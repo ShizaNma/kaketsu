@@ -3,6 +3,8 @@ background-color:#333333;
 }
 #game{
 background-color:#000000;
+width:400px;
+height:800px;
 }
 #top{
 color:#ffffff;
