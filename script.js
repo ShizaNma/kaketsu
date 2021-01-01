@@ -1,8 +1,6 @@
-(function(){"use strict";
-var gamecanvas = document.getElementById('game');
-var ctx = gamecanvas.getContext('2d');
+var canvas = document.getElementById('game');
+var ctx = canvas.getContext('2d');
 function draw() {
 ctx.fillStyle = "#ffffff";
-ctx.fillRect(440, 200, 20, 20);
+ctx.fillRect(200, 200, 20, 20);
 }
-})();
