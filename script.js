@@ -7,4 +7,6 @@ ctx.strokeStyle = "#FF0000";
 ctx.stroke();
 ctx.closePath();
 
-ctx.drawImage(tofu.png, 175, 0)
+var tofu = new Image();
+tofu.src = "tofu.png";
+ctx.drawImage(tofu, 175, 0);
