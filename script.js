@@ -11,9 +11,3 @@ tofusprt.anchor.y = 0.5;
 tofusprt.x = app.screen.width / 2;
 tofusprt.y = app.screen.height;
 app.stage.addChild(tofusprt);
-
-tofusprt.interactive = true;
-tofusprt.on('pointertap',tofuevent);
-function tofuevent(e) {
-alert(unko);
-}
