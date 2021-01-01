@@ -25,10 +25,10 @@ app.stage.addChild(tofu);
 
 function gameLoop()
 {
-tofu.y += tofudy
+tofu.y += tofudy;
 if(tofu.y < 50 || tofu.y > 750)
 {
-tofudy = -tofudy
+tofudy = -tofudy;
 }
 }
 addGameLoop(gameLoop);
