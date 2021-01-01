@@ -1,2 +1,4 @@
 const gamecanvas = document.getElementById('game');
-const gamectx = gamecanvas.getContext('2d');
+const ctx = gamecanvas.getContext('2d');
+ctx.fillStyle = "#ffffff";
+ctx.fillRect(440,200,20,20);
