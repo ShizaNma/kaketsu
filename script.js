@@ -34,4 +34,17 @@ PIXI.loader.load((loader, resources) =>
     {
         removeAllScene(); 
         removeAllGameLoops(); 
-        
+        const gameScene = new PIXI.Container(); 
+        app.stage.addChild(gameScene); 
+        const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
+        tofu.x = 225; 
+        tofu.y = 50; 
+        gameScene.addChild(tofu); 
+        function gameLoop()
+        {
+            tofu.y += tofuVy; 
+        }
+        addGameLoop(gameLoop); 
+    }
+    createGameScene(); 
+});
