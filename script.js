@@ -19,7 +19,7 @@ dy = -dy;
 }
 
 function Click(e) {
-var rect = e.target.getBoundingClientRect();
+var rect = canvas.getBoundingClientRect();
 x = e.clientX - rect.left;
 }
 
