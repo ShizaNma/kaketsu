@@ -1,6 +1,11 @@
 body{
-background-color:#333333
+background-color:#333333;
 }
-canvas{
-background-color:#000000
+#game{
+background-color:#000000;
+}
+#top{
+color:#ffffff;
+font-size:large;
+font-weight:bold;
 }
