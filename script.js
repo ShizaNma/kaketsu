@@ -1,5 +1,5 @@
 function draw() {
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById('game');
 if (canvas.getContext) {
 var ctx = canvas.getContext('2d');
 ctx.fillRect(25, 25, 100, 100);
