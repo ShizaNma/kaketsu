@@ -20,7 +20,7 @@ dy = -dy;
 
 function Click(e) {
 var rect = canvas.getBoundingClientRect();
-var point = {x: e.clientX - rect.left,y: e.clientY - rect.top};
+var point = { x: e.clientX - rect.left, y: e.clientY - rect.top};
 if(point.x < x + 100 && point.x > x && point.y < y + 100 && point.y > y) {
 dy = -dy;
 }
