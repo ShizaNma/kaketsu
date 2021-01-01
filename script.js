@@ -9,4 +9,6 @@ ctx.closePath();
 
 var tofu = new Image();
 tofu.src = "tofu.png";
+tofu.onload = fanction() {
 ctx.drawImage(tofu, 175, 0);
+};
