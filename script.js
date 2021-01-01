@@ -12,10 +12,9 @@ tofu.onload = function() {
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 ctx.drawImage(tofu, x, y);
 y += dy;
-};
-};
-
 if(y + 100 > canvas.height) {
 dy = -dy;
-};
+}
+}
+}
 setInterval(draw, 40);
