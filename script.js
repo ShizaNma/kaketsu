@@ -14,4 +14,7 @@ ctx.drawImage(tofu, x, y);
 y += dy;
 };
 };
+if(y > canvas.height) {
+dy = -dy;
+}
 setInterval(draw, 40);
