@@ -1,6 +1,6 @@
 const app = new PIXI.Application({ width: 450, height: 800 }); 
 document.body.appendChild(app.view); 
-app.renderer.view.style.position = "relative"; 
+app.renderer.view.style.position = "absolute"; 
 app.renderer.view.style.width = "450px"; 
 app.renderer.view.style.height = "800px"; 
 app.renderer.view.style.display = "block"; 
