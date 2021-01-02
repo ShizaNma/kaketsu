@@ -1,6 +1,7 @@
 const app = new PIXI.Application({ width: 450, height: 800 }); 
 document.body.appendChild(app.view); 
-app.renderer.view.style.position = "absolute"; 
+app.renderer.view.style.position = "relative"; 
+app.renderer.view.style.left = "50%"; 
 app.renderer.view.style.width = "450px"; 
 app.renderer.view.style.height = "800px"; 
 app.renderer.view.style.display = "block"; 
@@ -37,6 +38,8 @@ PIXI.loader.load((loader, resources) =>
         const gameScene = new PIXI.Container(); 
         app.stage.addChild(gameScene); 
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
+        tofu.anchor.x = 0.5;
+        tofu.anchor.y = 0.5;
         tofu.x = 225; 
         tofu.y = 50; 
         gameScene.addChild(tofu); 
