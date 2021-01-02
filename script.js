@@ -5,7 +5,7 @@ app.renderer.view.style.width = "450px";
 app.renderer.view.style.height = "800px"; 
 app.renderer.view.style.display = "block"; 
 app.renderer.backgroundColor = 0x000000; 
-app.renderer.view.style.transform = "translateX(−50%)"; 
+app.renderer.view.style.transform = "translate3d( −50% , 0 , 0 )"; 
 app.renderer.view.style.left = "50%"; 
 PIXI.loader.add("tofu.png")
 PIXI.loader.load((loader, resources) =>
