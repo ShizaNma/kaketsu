@@ -10,7 +10,7 @@ PIXI.loader.add("tofu.png")
 PIXI.loader.load((loader, resources) =>
 {
     let gameLoops = []; 
-    let tofuVy = 2; 
+    let tofuVy = 4; 
     function addGameLoop(gameLoopFunction)
     {
         app.ticker.add(gameLoopFunction); 
@@ -44,10 +44,13 @@ PIXI.loader.load((loader, resources) =>
         function gameLoop()
         {
             tofu.y += tofuVy; 
-            if (tofu.y + 8 < 0 || tofu.y + 8 > 700)
+            if (tofu.y < 0 || tofu.y > 700)
             {
                 tofuVy = -tofuVy; 
             }
+            tofu.on(“pointerdown”, () =>{
+            tofuVy = -tofuVy; 
+            }); 
         }
         addGameLoop(gameLoop); 
     }
