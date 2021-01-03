@@ -1,8 +1,8 @@
 const app = new PIXI.Application({ width: 450, height: 800 }); 
 document.body.appendChild(app.view); 
-app.renderer.view.style.position = 'relative'; 
-app.renderer.view.style.left = '50%'; 
-app.renderer.view.style.transform = 'translate3d( -50%, 0, 0)'; 
+app.renderer.view.style.position = "relative"; 
+app.renderer.view.style.left = "50%"; 
+app.renderer.view.style.transform = "translate3d( -50%, 0, 0)"; 
 app.renderer.view.style.width = "450px"; 
 app.renderer.view.style.height = "800px"; 
 app.renderer.backgroundColor = 0x000000; 
@@ -46,7 +46,7 @@ PIXI.loader.load((loader, resources) =>
         function gameLoop()
         {
             tofu.y += tofuVy; 
-            if(tofu.y < 50 || tofu.y > 750); 
+            if(tofu.y + 8 < 50 || tofu.y + 8 > 750); 
             {
                 tofuVy = -tofuVy; 
             }
