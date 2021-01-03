@@ -38,15 +38,13 @@ PIXI.loader.load((loader, resources) =>
         const gameScene = new PIXI.Container(); 
         app.stage.addChild(gameScene); 
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
-        tofu.anchor.x = 0.5;
-        tofu.anchor.y = 0.5;
-        tofu.x = 225; 
-        tofu.y = 50; 
+        tofu.x = 175; 
+        tofu.y = 0; 
         gameScene.addChild(tofu); 
         function gameLoop()
         {
             tofu.y += tofuVy; 
-            if(tofu.y > 750); 
+            if (tofu.y > 700)
             {
                 tofuVy = -tofuVy; 
             }
