@@ -40,6 +40,10 @@ PIXI.loader.load((loader, resources) =>
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
         tofu.x = 175; 
         tofu.y = 0; 
+        tofu.on(“pointerdown”, () =>
+        {
+            tofuVy = -tofuVy; 
+        }); 
         gameScene.addChild(tofu); 
         function gameLoop()
         {
@@ -48,10 +52,6 @@ PIXI.loader.load((loader, resources) =>
             {
                 tofuVy = -tofuVy; 
             }
-            tofu.on(“pointerdown”, () =>
-            {
-                tofuVy = -tofuVy; 
-            }); 
         }
         addGameLoop(gameLoop); 
     }
