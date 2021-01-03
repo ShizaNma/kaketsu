@@ -35,6 +35,25 @@ PIXI.loader.load((loader, resources) =>
     {
         speed = -speed; 
     }
+    function createStartScene()
+    {
+        removeAllScene(); 
+        removeAllGameLoops(); 
+        const startScene = new PIXI.Container(); 
+        app.stage.addChild(startScene); 
+        
+        const textStyle = new PIXI.TextStyle(
+        {
+            fontsize: 28,
+            fill: 0xffffff,
+        });
+        const titleText = new PIXI.Text("KAKETSU", textStyle); 
+        titleText.anchor.x = 0.5; 
+        titleText.anchor.y = 0.5; 
+        titleText.x = width / 2;　
+        titleText.y = height / 2; 
+        startScene.addChild(titleText);
+    }
     function createGameScene()
     {
         removeAllScene(); 
@@ -58,5 +77,5 @@ PIXI.loader.load((loader, resources) =>
         
         addGameLoop(gameLoop); 
     }
-    createGameScene(); 
+    createStartScene(); 
 });
