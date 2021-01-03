@@ -10,7 +10,7 @@ PIXI.loader.add("tofu.png");
 PIXI.loader.load((loader, resources) =>
 {
     let gameLoops = []; 
-    let tofuspeed = 4; 
+    let speed = 4; 
     function addGameLoop(gameLoopFunction)
     {
         app.ticker.add(gameLoopFunction); 
@@ -40,12 +40,13 @@ PIXI.loader.load((loader, resources) =>
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
         tofu.x = 175; 
         tofu.y = 0; 
+        gameScene.addChild(tofu); 
         function gameLoop()
         {
             tofu.y += tofuspeed; 
             if (tofu.y < 0 || tofu.y > 700)
             {
-                tofuspeed = -tofuspeed; 
+                speed = -speed; 
             }
         }
         
