@@ -31,6 +31,10 @@ PIXI.loader.load((loader, resources) =>
             app.stage.removeChild(scene); 
         }
     }
+    function tofuevent(eventdata)
+    {
+        tofuVy = -4; 
+    }
     function createGameScene()
     {
         removeAllScene(); 
@@ -41,11 +45,7 @@ PIXI.loader.load((loader, resources) =>
         tofu.x = 175; 
         tofu.y = 0; 
         tofu.interactive = true; 
-        tofu.on("touchstart", () =>
-        {
-            tofuVy = -4; 
-        }); 
-        
+        tofu.on("touchstart", tofuevent); 
         function gameLoop()
         {
             tofu.y += tofuVy; 
