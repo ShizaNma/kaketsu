@@ -40,12 +40,11 @@ PIXI.loader.load((loader, resources) =>
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
         tofu.x = 175; 
         tofu.y = 0; 
-        tofu.interactive = true; 
-        tofu.on(“pointerdown”, function () 
+        tofu.interactive = true; 
+        tofu.on("pointerdown", () =>
         {
-            tofuVy = -tofuVy; 
+            tofuVy = -4; // ボールのＹ速度を-8にする(上に飛ぶようにしている)
         }); 
-        gameScene.addChild(tofu); 
         
         function gameLoop()
         {
