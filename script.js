@@ -31,6 +31,10 @@ PIXI.loader.load((loader, resources) =>
             app.stage.removeChild(scene); 
         }
     }
+    function tofuevent(eventData)
+    {
+        speed = -speed; 
+    }
     function createGameScene()
     {
         removeAllScene(); 
@@ -40,6 +44,8 @@ PIXI.loader.load((loader, resources) =>
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
         tofu.x = 175; 
         tofu.y = 0; 
+        tofu.interactive = true; 
+        tofu.on('touchstart', tofuevent); 
         gameScene.addChild(tofu); 
         function gameLoop()
         {
