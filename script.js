@@ -41,9 +41,9 @@ PIXI.loader.load((loader, resources) =>
         tofu.x = 175; 
         tofu.y = 0; 
         tofu.interactive = true; 
-        tofu.on("pointerdown", () =>
+        tofu.on("touchstart", () =>
         {
-            tofuVy = -4; // ボールのＹ速度を-8にする(上に飛ぶようにしている)
+            tofuVy = -4; 
         }); 
         
         function gameLoop()
