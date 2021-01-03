@@ -41,7 +41,7 @@ PIXI.loader.load((loader, resources) =>
         tofu.x = 175; 
         tofu.y = 0; 
         tofu.interactive = true; 
-        tofu.on(“pointerdown”)
+        tofu.on(“pointerdown”, () =>
         {
             tofuVy = -tofuVy; 
         }); 
