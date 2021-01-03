@@ -47,7 +47,7 @@ PIXI.loader.load((loader, resources) =>
             fontsize: 28,
             fill: 0xffffff,
         });
-        const titleText = new PIXI.Text("KAKETSU", textStyle); 
+        const titleText = new PIXI.Text(`KAKETSU`, textStyle); 
         titleText.anchor.x = 0.5; 
         titleText.anchor.y = 0.5; 
         titleText.x = width / 2;　
