@@ -1,9 +1,8 @@
 const app = new PIXI.Application({ width: 450, height: 800 }); 
 document.body.appendChild(app.view); 
-app.renderer.view.style.position = 'absolute'; 
+app.renderer.view.style.position = 'relative'; 
 app.renderer.view.style.left = '50%'; 
-app.renderer.view.style.top = '50%'; 
-app.renderer.view.style.transform = 'translate3d( -50%, -50%, 0 )'; 
+app.renderer.view.style.transform = 'translate3d( -50%, 0, 0)'; 
 app.renderer.view.style.width = "450px"; 
 app.renderer.view.style.height = "800px"; 
 app.renderer.backgroundColor = 0x000000; 
