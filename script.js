@@ -41,11 +41,12 @@ PIXI.loader.load((loader, resources) =>
         tofu.x = 175; 
         tofu.y = 0; 
         tofu.interactive = true; 
-        tofu.on(“pointerdown”, () =>
+        tofu.on(“pointerdown”, function () 
         {
             tofuVy = -tofuVy; 
         }); 
         gameScene.addChild(tofu); 
+        
         function gameLoop()
         {
             tofu.y += tofuVy; 
@@ -54,6 +55,7 @@ PIXI.loader.load((loader, resources) =>
                 tofuVy = -tofuVy; 
             }
         }
+        
         addGameLoop(gameLoop); 
     }
     createGameScene(); 
