@@ -40,6 +40,7 @@ PIXI.loader.load((loader, resources) =>
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
         tofu.x = 175; 
         tofu.y = 0; 
+        tofu.interactive = true; 
         tofu.on(“pointerdown”)
         {
             tofuVy = -tofuVy; 
