@@ -46,6 +46,10 @@ PIXI.loader.load((loader, resources) =>
         function gameLoop()
         {
             tofu.y += tofuVy; 
+            if(tofu.y < 50 || tofu.y > 750); 
+            {
+                tofuVy = -tofuVy; 
+            }
         }
         addGameLoop(gameLoop); 
     }
