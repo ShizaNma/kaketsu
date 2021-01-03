@@ -48,8 +48,9 @@ PIXI.loader.load((loader, resources) =>
             {
                 tofuVy = -tofuVy; 
             }
-            tofu.on(“pointerdown”, () =>{
-            tofuVy = -tofuVy; 
+            tofu.on(“pointerdown”, () =>
+            {
+                tofuVy = -tofuVy; 
             }); 
         }
         addGameLoop(gameLoop); 
