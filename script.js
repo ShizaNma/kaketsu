@@ -66,13 +66,14 @@ PIXI.loader.load((loader, resources) =>
         
         const startStyle = new PIXI.TextStyle(
         {
+            fill: "#000000",
             fontSize: 32
         }); 
         const start = new PIXI.Text('START', startStyle); 
         start.anchor.x = 0.5; 
         start.anchor.y = 0.5; 
         start.x = 90; 
-        start.y = 250; 
+        start.y = 25; 
         buttonContainer.addChild(start); 
         
     }
