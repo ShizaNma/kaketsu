@@ -61,7 +61,6 @@ PIXI.loader.load((loader, resources) =>
         button.beginFill("#ffffff"); 
         button.drawRect(0, 0, 150, 50); 
         button.endFill(); 
-        buttonContainer.addChild(button); 
         
         const startStyle = new PIXI.TextStyle(
         {
@@ -72,10 +71,11 @@ PIXI.loader.load((loader, resources) =>
         start.anchor.x = 0.5; 
         start.anchor.y = 0.5; 
         start.x = 150 / 2; 
-        start.y = 500 / 2; 
-        buttonContainer.addChild(start); 
+        start.y = 50 / 2; 
         
         startScene.addChild(buttonContainer);　
+        buttonContainer.addChild(button); 
+        buttonContainer.addChild(start); 
     }
     function createGameScene()
     {
