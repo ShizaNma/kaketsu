@@ -43,6 +43,7 @@ PIXI.loader.load((loader, resources) =>
         app.stage.addChild(startScene); 
         const style = new PIXI.TextStyle(
             {
+                fill: "#ffffff", 
                 fontSize: 32,
                 fontStyle: "italic"
             }); 
