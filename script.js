@@ -43,7 +43,7 @@ PIXI.loader.load((loader, resources) =>
         app.stage.addChild(startScene); 
         const titleStyle = new PIXI.TextStyle(
             {
-                fill: "#ffffff", 
+                fill: "#ffffff",
                 fontSize: 32,
                 fontStyle: "italic"
             }); 
@@ -66,7 +66,7 @@ PIXI.loader.load((loader, resources) =>
         
         const startStyle = new PIXI.TextStyle(
         {
-            fontSize: 32,
+            fontSize: 32
         }); 
         const start = new PIXI.Text('START', startStyle); 
         start.anchor.x = 0.5; 
