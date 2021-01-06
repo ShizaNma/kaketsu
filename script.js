@@ -41,17 +41,42 @@ PIXI.loader.load((loader, resources) =>
         removeAllGameLoops(); 
         const startScene = new PIXI.Container(); 
         app.stage.addChild(startScene); 
-        const style = new PIXI.TextStyle(
+        const titleStyle = new PIXI.TextStyle(
             {
                 fill: "#ffffff", 
                 fontSize: 32,
                 fontStyle: "italic"
             }); 
-        const startText = new PIXI.Text('KAKETSU GAME', style); 
-        startText.anchor.x = 0.5; 
-        startText.x = 225; 
-        startText.y = 200; 
-        startScene.addChild(startText); 
+        const title = new PIXI.Text('KAKETSU GAME', titleStyle); 
+        title.anchor.x = 0.5; 
+        title.x = 225; 
+        title.y = 200; 
+        startScene.addChild(title); 
+        
+        const buttonContainer = new PIXI.Container(); 
+        buttonContainer.anchor.x = 0.5; 
+        buttonContainer.x = 225; 
+        buttonContainer.y = 500; 
+        
+        const button = new PIXI.Graphics(); 
+        button.beginFill("#ffffff"); 
+        button.drawRect(0, 0, 150, 50); 
+        button.endFill(); 
+        buttonContainer.addChild(button); 
+        
+        const startStyle = new PIXI.TextStyle(
+        {
+            fontSize: 32,
+            fontStyle: "italic"
+        }); 
+        const start = new PIXI.Text('START', startStyle); 
+        start.anchor.x = 0.5; 
+        start.anchor.y = 0.5; 
+        start.x = width / 2; 
+        start.y = height / 2; 
+        buttonContainer.addChild(start); 
+        
+        startScene.addChild(buttonContainer);　
     }
     function createGameScene()
     {
