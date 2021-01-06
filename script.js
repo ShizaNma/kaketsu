@@ -44,7 +44,7 @@ PIXI.loader.load((loader, resources) =>
     {
         if (speed > 0)
         {
-            speed = createRandom(); * -1;
+            speed = createRandom() * -1;
         }else
         {
             speed = createRandom(); 
