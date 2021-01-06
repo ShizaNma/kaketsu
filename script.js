@@ -14,7 +14,7 @@ PIXI.loader.load((loader, resources) =>
     
     function createRandom()
     {
-        var random = Math.random() * 15; 
+        var rand = Math.random() * 15; 
     }
     
     function addGameLoop(gameLoopFunction)
@@ -40,14 +40,14 @@ PIXI.loader.load((loader, resources) =>
     
     function tofuevent(eventData)
     {
-        if (speed < 0)
+        if (speed > 0)
         {
             createRandom(); 
-            var speed = random; 
+            var speed = -rand; 
         }else
         {
             createRandom(); 
-            var speed = -random; 
+            var speed = rand; 
         }
     }
     function startFunction()
