@@ -59,7 +59,7 @@ PIXI.loader.load((loader, resources) =>
         startScene.addChild(buttonContainer);　
         
         const button = new PIXI.Graphics(); 
-        button.beginFill("#ffffff"); 
+        button.beginFill(0xffffff); 
         button.drawRect(0, 0, 150, 50); 
         button.endFill(); 
         buttonContainer.addChild(button); 
