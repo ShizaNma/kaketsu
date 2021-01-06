@@ -10,11 +10,12 @@ PIXI.loader.add("tofu.png");
 PIXI.loader.load((loader, resources) =>
 {
     let gameLoops = []; 
-    var speed = 4
+    var speed = 2
     
     function createRandom()
     {
-        var rand = speed * 2;
+        var rand = speed * 2; 
+        return rand
     }
     
     function addGameLoop(gameLoopFunction)
@@ -40,15 +41,7 @@ PIXI.loader.load((loader, resources) =>
     
     function tofuevent(eventData)
     {
-        if (speed > 0)
-        {
-            createRandom(); 
-            var speed = -rand; 
-        }else
-        {
-            createRandom(); 
-            var speed = rand; 
-        }
+        speed = speed * 2; 
     }
     function startFunction()
     {
