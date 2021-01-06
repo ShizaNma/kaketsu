@@ -54,7 +54,6 @@ PIXI.loader.load((loader, resources) =>
         startScene.addChild(title); 
         
         const buttonContainer = new PIXI.Container(); 
-        buttonContainer.anchor.x = 0.5; 
         buttonContainer.x = 225; 
         buttonContainer.y = 500; 
         
@@ -72,8 +71,8 @@ PIXI.loader.load((loader, resources) =>
         const start = new PIXI.Text('START', startStyle); 
         start.anchor.x = 0.5; 
         start.anchor.y = 0.5; 
-        start.x = width / 2; 
-        start.y = height / 2; 
+        start.x = 150 / 2; 
+        start.y = 500 / 2; 
         buttonContainer.addChild(start); 
         
         startScene.addChild(buttonContainer);　
