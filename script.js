@@ -43,11 +43,11 @@ PIXI.loader.load((loader, resources) =>
         if (speed < 0)
         {
             createRandom(); 
-            speed = random; 
+            var speed = random; 
         }else
         {
             createRandom(); 
-            speed = -random; 
+            var speed = -random; 
         }
     }
     function startFunction()
