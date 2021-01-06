@@ -15,7 +15,7 @@ PIXI.loader.load((loader, resources) =>
     
     function createRandom()
     {
-        var rand = speed * 2; 
+        var rand = Math.floor( Math.random() * 9 ) + 2;
         return rand
     }
     
