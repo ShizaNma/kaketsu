@@ -60,8 +60,10 @@ PIXI.loader.load((loader, resources) =>
         
         const button = new PIXI.Graphics(); 
         button.beginFill(0xffffff); 
-        button.drawRect(0, 0, 150, 50); 
+        button.drawRect(0, 0, 180, 50); 
         button.endFill(); 
+        button.anchor.x = 0.5; 
+        button.anchor.y = 0.5; 
         buttonContainer.addChild(button); 
         
     }
