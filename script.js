@@ -14,7 +14,7 @@ PIXI.loader.load((loader, resources) =>
     
     function createRandom()
     {
-        var rand = Math.random() * 15; 
+        var rand = speed * 2;
     }
     
     function addGameLoop(gameLoopFunction)
