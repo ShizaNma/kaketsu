@@ -42,7 +42,13 @@ PIXI.loader.load((loader, resources) =>
     
     function tofuevent(eventData)
     {
-        speed = createRandom();  
+        if (speed > 0)
+        {
+            speed = createRandom(); * -1;
+        }else
+        {
+            speed = createRandom(); 
+        }
     }
     function startFunction()
     {
