@@ -11,6 +11,7 @@ PIXI.loader.load((loader, resources) =>
 {
     let gameLoops = []; 
     let speed = 4; 
+    
     function addGameLoop(gameLoopFunction)
     {
         app.ticker.add(gameLoopFunction); 
@@ -31,10 +32,16 @@ PIXI.loader.load((loader, resources) =>
             app.stage.removeChild(scene); 
         }
     }
+    
     function tofuevent(eventData)
     {
         speed = -speed; 
     }
+    function startFunction()
+    {
+        createGameScene();
+    }
+    
     function createStartScene()
     {
         removeAllScene(); 
@@ -62,6 +69,8 @@ PIXI.loader.load((loader, resources) =>
         button.beginFill(0xffffff); 
         button.drawRect(0, 0, 180, 50); 
         button.endFill(); 
+        button.interactive = true; 
+        button.on("pointerdown", startFunction); 
         buttonContainer.addChild(button); 
         
         const startStyle = new PIXI.TextStyle(
@@ -87,7 +96,7 @@ PIXI.loader.load((loader, resources) =>
         tofu.x = 175; 
         tofu.y = 0; 
         tofu.interactive = true; 
-        tofu.on('touchstart', tofuevent); 
+        tofu.on('pointerdown', tofuevent); 
         gameScene.addChild(tofu); 
         function gameLoop()
         {
