@@ -54,10 +54,8 @@ PIXI.loader.load((loader, resources) =>
         startScene.addChild(title); 
         
         const buttonContainer = new PIXI.Container(); 
-        buttonContainer.x = 225; 
+        buttonContainer.x = 135; 
         buttonContainer.y = 500; 
-        buttonContainer.anchor.x = 0.5; 
-        buttonContainer.anchor.y = 0.5; 
         startScene.addChild(buttonContainer);　
         
         const button = new PIXI.Graphics(); 
@@ -65,6 +63,17 @@ PIXI.loader.load((loader, resources) =>
         button.drawRect(0, 0, 180, 50); 
         button.endFill(); 
         buttonContainer.addChild(button); 
+        
+        const startStyle = new PIXI.TextStyle(
+        {
+            fontSize: 32,
+        }); 
+        const start = new PIXI.Text('START', startStyle); 
+        start.anchor.x = 0.5; 
+        start.anchor.y = 0.5; 
+        start.x = 90; 
+        start.y = 250; 
+        buttonContainer.addChild(start); 
         
     }
     function createGameScene()
