@@ -42,17 +42,13 @@ PIXI.loader.load((loader, resources) =>
         const startScene = new PIXI.Container(); 
         app.stage.addChild(startScene); 
         
-        const textStyle = new PIXI.TextStyle(
-        {
-            fontsize: 28,
-            fill: 0xffffff,
-        });
-        const titleText = new PIXI.Text(`KAKETSU`, textStyle); 
-        titleText.anchor.x = 0.5; 
-        titleText.anchor.y = 0.5; 
-        titleText.x = width / 2;　
-        titleText.y = height / 2; 
-        startScene.addChild(titleText);
+        const style = new PIXI.TextStyle(
+            {
+                fontSize: 32,
+                fontStyle: "italic"
+            }); 
+        const startText = new PIXI.Text('KAKETSU GAME', style); 
+        startScene.addChild(startText); 
     }
     function createGameScene()
     {
