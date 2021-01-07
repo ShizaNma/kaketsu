@@ -1,4 +1,4 @@
-const app = new PIXI.Application({ width: 450, height: 800 }); 
+const app = new PIXI.Application({ width: 800, height: 400 }); 
 document.body.appendChild(app.view); 
 app.renderer.view.style.position = "relative"; 
 app.renderer.view.style.left = "50%"; 
