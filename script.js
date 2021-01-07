@@ -61,7 +61,7 @@ PIXI.loader.load((loader, resources) =>
     
     function tofuevent(eventData)
     {
-        score += 1; 
+        score = score + 1; 
         const scoreStyle = new PIXI.TextStyle(
         {
             fill: "#ffffff",
