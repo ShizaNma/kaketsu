@@ -3,8 +3,8 @@ document.body.appendChild(app.view);
 app.renderer.view.style.position = "relative"; 
 app.renderer.view.style.left = "50%"; 
 app.renderer.view.style.transform = "translate3d( -50%, 0, 0)"; 
-app.renderer.view.style.width = "450px"; 
-app.renderer.view.style.height = "800px"; 
+app.renderer.view.style.width = "800px"; 
+app.renderer.view.style.height = "600px"; 
 app.renderer.backgroundColor = 0x000000; 
 PIXI.loader.add("tofu.png"); 
 PIXI.loader.load((loader, resources) =>
@@ -69,12 +69,12 @@ PIXI.loader.load((loader, resources) =>
             }); 
         const title = new PIXI.Text('KAKETSU GAME', titleStyle); 
         title.anchor.x = 0.5; 
-        title.x = 225; 
-        title.y = 200; 
+        title.x = 400; 
+        title.y = 150; 
         startScene.addChild(title); 
         
         const buttonContainer = new PIXI.Container(); 
-        buttonContainer.x = 135; 
+        buttonContainer.x = 310; 
         buttonContainer.y = 500; 
         startScene.addChild(buttonContainer);　
         
