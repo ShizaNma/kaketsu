@@ -15,7 +15,7 @@ PIXI.loader.load((loader, resources) =>
     
     function createRandom()
     {
-        var rand = Math.floor( Math.random() * 9 ) + 2;
+        var rand = Math.floor( Math.random() * 10 ) + 3;
         return rand
     }
     
@@ -75,7 +75,7 @@ PIXI.loader.load((loader, resources) =>
         
         const buttonContainer = new PIXI.Container(); 
         buttonContainer.x = 310; 
-        buttonContainer.y = 500; 
+        buttonContainer.y = 400; 
         startScene.addChild(buttonContainer);　
         
         const button = new PIXI.Graphics(); 
@@ -106,13 +106,14 @@ PIXI.loader.load((loader, resources) =>
         const gameScene = new PIXI.Container(); 
         app.stage.addChild(gameScene); 
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
-        tofu.x = 175; 
-        tofu.y = 0; 
+        tofu.x = 350; 
+        tofu.y = 250; 
         tofu.interactive = true; 
         tofu.on('pointerdown', tofuevent); 
         gameScene.addChild(tofu); 
         function gameLoop()
         {
+            tofu.x += speed; 
             tofu.y += speed; 
             if (tofu.y < 0 || tofu.y > 700)
             {
