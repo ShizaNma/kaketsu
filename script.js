@@ -14,8 +14,8 @@ PIXI.loader.load((loader, resources) =>
     var yspeed = createYRandom(); 
     var xrand = xspeed; 
     var yrand = yspeed; 
-    var twoa = Math.floor( Math.random() * 1 ) +1; 
-    var twob = Math.floor( Math.random() * 1 ) +1; 
+    var twoan = Math.floor( Math.random() * 2,10 ); 
+    var twobn = Math.floor( Math.random() * 2,10 ); 
     
     function createXRandom()
     {
@@ -76,8 +76,8 @@ PIXI.loader.load((loader, resources) =>
     {
         removeAllScene(); 
         removeAllGameLoops(); 
-        twoa = Math.floor( Math.random() * 1 ) +1; 
-        twob = Math.floor( Math.random() * 1 ) +1; 
+        var twoa = twoan(Math.floor( Math.random() * 2,10 ); 
+        var twob = twobn(Math.floor( Math.random() * 2,10 ); 
         if (twoa == 1)
         {
             xspeed = createXRandom(); 
