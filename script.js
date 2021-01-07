@@ -28,13 +28,11 @@ PIXI.loader.load((loader, resources) =>
     
     function twoa()
     {
-        var twoan = Math.floor( Math.random() * 1 );
-        return twoan
+        var twoan = Math.floor( Math.random() * 1 ); 
     }
     function twob()
     {
         var twobn = Math.floor( Math.random() * 1 ); 
-        return twobn
     }
     
     function addGameLoop(gameLoopFunction)
