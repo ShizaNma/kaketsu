@@ -16,10 +16,11 @@ PIXI.loader.load((loader, resources) =>
     var yrand = yspeed; 
     var twoan = 0;
     var twobn = 0; 
+    var score = 0; 
     
     function createXRandom()
     {
-        var xrand = Math.floor( Math.random() * 7 ) + 3; 
+        var xrand = Math.floor( Math.random() * 5 ) + 3; 
         return xrand
     }
     function createYRandom()
@@ -60,6 +61,17 @@ PIXI.loader.load((loader, resources) =>
     
     function tofuevent(eventData)
     {
+        score += 1; 
+        const scoreStyle = new PIXI.TextStyle(
+        {
+            fill: "#ffffff",
+            fontSize: 32,
+            fontStyle: "italic"
+        }); 
+        const score = new PIXI.Text('SCORE:${score}', scoreStyle); 
+        score.x = 0; 
+        score.y = 0; 
+        app.stage.addChild(score); 
         if (xspeed > 0)
         {
             xspeed = createXRandom() * -1; 
@@ -155,6 +167,7 @@ PIXI.loader.load((loader, resources) =>
         tofu.interactive = true; 
         tofu.on('pointerdown', tofuevent); 
         gameScene.addChild(tofu); 
+        
         function gameLoop()
         {
             tofu.x += xspeed; 
