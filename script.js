@@ -10,10 +10,10 @@ PIXI.loader.add("tofu.png");
 PIXI.loader.load((loader, resources) =>
 {
     let gameLoops = []; 
-    var xspeed = 2; 
-    var yspeed = 2; 
-    var xrand = 2; 
-    var yrand = 2; 
+    var xspeed = createXRandom(); 
+    var yspeed = createYRandom(); 
+    var xrand = xspeed; 
+    var yrand = yspeed; 
     
     function createXRandom()
     {
@@ -130,7 +130,7 @@ PIXI.loader.load((loader, resources) =>
         {
             tofu.x += xspeed; 
             tofu.y += yspeed; 
-            if (tofu.y < 0 || tofu.y > 500)
+            if (tofu.y < 0 || tofu.y > 500 || tofu.x < 0 || tofu.x > 700)
             {
                 createStartScene(); 
             }
