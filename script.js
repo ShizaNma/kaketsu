@@ -17,13 +17,24 @@ PIXI.loader.load((loader, resources) =>
     
     function createXRandom()
     {
-        var xrand = Math.floor( Math.random() * 10 ) + 3; 
+        var xrand = Math.floor( Math.random() * 7 ) + 3; 
         return xrand
     }
     function createYRandom()
     {
-        var yrand = Math.floor( Math.random() * 10 ) + 3;
+        var yrand = Math.floor( Math.random() * 7 ) + 3;
         return yrand
+    }
+    
+    function twoa()
+    {
+        var twoan = Math.floor( Math.random() * 1 );
+        return twoan
+    }
+    function twob()
+    {
+        var twobn = Math.floor( Math.random() * 1 ); 
+        return twobn
     }
     
     function addGameLoop(gameLoopFunction)
@@ -74,8 +85,22 @@ PIXI.loader.load((loader, resources) =>
     {
         removeAllScene(); 
         removeAllGameLoops(); 
-        xspeed = createXRandom(); 
-        yspeed = createYRandom(); 
+        twoa(); 
+        twob(); 
+        if (twoan == 0)
+        {
+            xspeed = createXRandom(); 
+        }else
+        {
+            xspeed = createXRandom() *　-1; 
+        }
+        if (twobn == 0)
+        {
+            yspeed = createYRandom(); 
+        }else
+        {
+            yspeed = createYRandom() * -1; 
+        }
         xrand = xspeed; 
         yrand = yspeed; 
         const startScene = new PIXI.Container(); 
