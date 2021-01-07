@@ -74,10 +74,10 @@ PIXI.loader.load((loader, resources) =>
     {
         removeAllScene(); 
         removeAllGameLoops(); 
-        var xspeed = createXRandom(); 
-        var yspeed = createYRandom(); 
-        var xrand = xspeed; 
-        var yrand = yspeed; 
+        xspeed = createXRandom(); 
+        yspeed = createYRandom(); 
+        xrand = xspeed; 
+        yrand = yspeed; 
         const startScene = new PIXI.Container(); 
         app.stage.addChild(startScene); 
         const titleStyle = new PIXI.TextStyle(
