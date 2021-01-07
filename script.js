@@ -128,11 +128,11 @@ PIXI.loader.load((loader, resources) =>
         gameScene.addChild(tofu); 
         function gameLoop()
         {
-            tofu.x += speed; 
-            tofu.y += speed; 
+            tofu.x += xspeed; 
+            tofu.y += yspeed; 
             if (tofu.y < 0 || tofu.y > 500)
             {
-                speed = -speed; 
+                createStartScene(); 
             }
         }
         
