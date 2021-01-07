@@ -10,6 +10,10 @@ PIXI.loader.add("tofu.png");
 PIXI.loader.load((loader, resources) =>
 {
     let gameLoops = []; 
+    var xspeed = createXRandom(); 
+    var yspeed = createYRandom(); 
+    var xrand = xspeed; 
+    var yrand = yspeed; 
     
     function createXRandom()
     {
