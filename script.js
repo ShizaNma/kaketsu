@@ -1,5 +1,5 @@
 const app = new PIXI.Application({ width: 800, height: 600 }); 
-document.getElementById("app").appendChild(app.renderer.view); 
+document.getElementById("app").appendChild(app.view); 
 app.renderer.view.style.position = "relative"; 
 app.renderer.view.style.left = "50%"; 
 app.renderer.view.style.transform = "translate3d( -50%, 0, 0)"; 
