@@ -52,25 +52,6 @@ PIXI.loader.load((loader, resources) =>
         }
     }
     
-    function tofuevent(eventData)
-    {
-        score = score + 1; 
-        if (tofu.x > 400)
-        {
-            xspeed = createXRandom() * -1; 
-        }else
-        {
-            xspeed = createXRandom(); 
-        }
-        
-        if (tofu.y > 300)
-        {
-            yspeed = createYRandom() * -1;
-        }else
-        {
-            yspeed = createYRandom(); 
-        }
-    }
     function startFunction()
     {
         createGameScene();
@@ -163,5 +144,25 @@ PIXI.loader.load((loader, resources) =>
         
         addGameLoop(gameLoop); 
     }
+    
+    function tofuevent(eventData)
+    {
+        score = score + 1; 
+        if (tofu.x > 350)
+        {
+            xspeed = createXRandom() * -1;
+        }else
+        {
+            xspeed = createXRandom();
+        }
+        if (tofu.y > 250)
+        {
+            yspeed = createYRandom() * -1; 
+        }else
+        {
+            yspeed = createYRandom();
+        }
+    }
+    
     createStartScene(); 
 });
