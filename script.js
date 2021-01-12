@@ -14,8 +14,6 @@ PIXI.loader.load((loader, resources) =>
     var yspeed = createYRandom(); 
     var xrand = xspeed; 
     var yrand = yspeed; 
-    var twoan = 0;
-    var twobn = 0; 
     var score = 0; 
     
     function createXRandom()
@@ -57,7 +55,7 @@ PIXI.loader.load((loader, resources) =>
     function tofuevent(eventData)
     {
         score = score + 1; 
-        if (xspeed > 0)
+        if (tofu.x > 400)
         {
             xspeed = createXRandom() * -1; 
         }else
@@ -65,7 +63,7 @@ PIXI.loader.load((loader, resources) =>
             xspeed = createXRandom(); 
         }
         
-        if (yspeed > 0)
+        if (tofu.y > 300)
         {
             yspeed = createYRandom() * -1;
         }else
