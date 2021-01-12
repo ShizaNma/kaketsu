@@ -150,7 +150,7 @@ PIXI.loader.load((loader, resources) =>
                 yspeed = createYRandom();
             }
             var scoreText = "SCORE:" + score ;
-            document.getElementById('score').innerHTML = scoreText;
+            document.getElementById('score').innerHTML = <p id="top">scoreText</p>;
         }
         
         function gameLoop()
