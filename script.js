@@ -149,7 +149,7 @@ PIXI.loader.load((loader, resources) =>
             {
                 yspeed = createYRandom();
             }
-            var scoreText = "<p id="top">SCORE:${score}</p>";
+            var scoreText = "SCORE:${score}";
             document.getElementById('score').innerHTML = scoreText;
         }
         
