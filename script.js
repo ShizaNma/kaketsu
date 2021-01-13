@@ -62,6 +62,7 @@ PIXI.loader.load((loader, resources) =>
         removeAllScene(); 
         removeAllGameLoops(); 
         var score = 0; 
+        document.getElementById('score').innerHTML = "SCORE:0";
         var twom = two(); 
         if (twom == 1)
         {
