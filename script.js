@@ -61,8 +61,6 @@ PIXI.loader.load((loader, resources) =>
     {
         removeAllScene(); 
         removeAllGameLoops(); 
-        var score = 0; 
-        document.getElementById('score').innerHTML = "SCORE:0";
         var twom = two(); 
         if (twom == 1)
         {
@@ -125,6 +123,8 @@ PIXI.loader.load((loader, resources) =>
     {
         removeAllScene(); 
         removeAllGameLoops(); 
+        score = 0;
+        document.getElementById('score').innerHTML = "SCORE:0";
         const gameScene = new PIXI.Container(); 
         app.stage.addChild(gameScene); 
         const tofu = new PIXI.Sprite(resources["tofu.png"].texture); 
